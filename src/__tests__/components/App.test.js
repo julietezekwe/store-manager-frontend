@@ -1,6 +1,5 @@
-import 'babel-polyfill';
-import React from 'react';
-import { shallow } from 'enzyme';
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-undef */
 import App from '../../App.jsx';
 
 let wrapper;

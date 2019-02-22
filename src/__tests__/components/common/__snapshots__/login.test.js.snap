@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginPage /> renders correctly 1`] = `
+<section
+  className="login-page"
+>
+  <div
+    className="login-form"
+  >
+    <h1
+      className="login-heading"
+    >
+      Log In
+    </h1>
+    <div
+      className="myCard col-9"
+      id="alert"
+    />
+    <div
+      className="form login"
+    >
+      <div>
+        <input
+          id="email"
+          onChange={[Function]}
+          placeholder="Email"
+          required={true}
+          type="email"
+        />
+      </div>
+      <div>
+        <input
+          id="password"
+          onChange={[Function]}
+          placeholder="password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <div>
+        <input
+          onClick={[Function]}
+          type="submit"
+          value="LOG IN"
+        />
+      </div>
+      <div
+        className="forgotpassword"
+      >
+        <p>
+          <i>
+            Forgot Password?
+          </i>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;

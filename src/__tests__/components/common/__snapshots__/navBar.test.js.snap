@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu Component should match snapshot 1`] = `
+<header
+  id="header"
+>
+  <nav>
+     
+    <div
+      className="logo"
+    >
+      <i
+        className="fab fa-stripe-s"
+      />
+      tore 
+      <i
+        className="fab fa-medium-m"
+      />
+      anager
+    </div>
+    <ul>
+      <li>
+        <a
+          href="/attendant/checkout"
+        >
+          <i
+            className="fas fa-shopping-cart"
+          />
+          <i
+            style={
+              Object {
+                "background": "brown",
+                "borderRadius": "100%",
+                "color": "white",
+                "display": "inline-block",
+                "fontSize": "10px",
+                "height": "13px",
+                "lineHeight": "13px",
+                "textAlign": "center",
+                "width": "13px",
+              }
+            }
+          />
+        </a>
+      </li>
+      <li>
+        <i
+          className="fas fa-user-lock"
+        />
+      </li>
+      <li>
+        <i
+          className="fas fa-sign-in-alt"
+        >
+           
+          <span>
+             Logout
+          </span>
+        </i>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
