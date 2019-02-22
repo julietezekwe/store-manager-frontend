@@ -1,3 +1,4 @@
+/* eslint no-use-before-define: 0 */
 import 'babel-polyfill';
 import React from 'react';
 import { shallow, mount } from 'enzyme';

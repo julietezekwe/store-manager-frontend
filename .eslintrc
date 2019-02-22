@@ -67,15 +67,6 @@
       "quotes": [
         "error",
         "single"
-      ],
-      "valid-jsdoc": [
-        "error",
-        {
-          "requireReturn": true,
-          "requireReturnType": true,
-          "requireParamDescription": false,
-          "requireReturnDescription": true
-        }
       ]
     }
   }

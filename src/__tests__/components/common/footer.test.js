@@ -1,10 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-undef */
-import App from '../../App.jsx';
+import Footer from '../../../components/common/Footer.jsx';
 
 let wrapper;
 beforeEach(() => {
-  wrapper = shallow(<App />);
+  wrapper = shallow(<Footer />);
 });
 describe('App Component', () => {
   it('should match snapshot', () => {

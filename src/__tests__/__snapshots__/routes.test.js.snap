@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Routes Component should match snapshot 1`] = `
+<Switch>
+  <Route
+    component={[Function]}
+    default={true}
+    exact={true}
+    path="/"
+  />
+  <Connect(AdminRoutes)
+    component={[Function]}
+    exact={true}
+    path="/admin"
+  />
+  <Connect(AttendantRoutes)
+    component={[Function]}
+    exact={true}
+    path="/attendant"
+  />
+</Switch>
+`;

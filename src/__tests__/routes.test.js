@@ -1,12 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-undef */
-import App from '../../App.jsx';
+import Routes from '../Routes.jsx';
 
 let wrapper;
 beforeEach(() => {
-  wrapper = shallow(<App />);
+  wrapper = shallow(<Routes />);
 });
-describe('App Component', () => {
+describe('Routes Component', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });

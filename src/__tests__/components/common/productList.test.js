@@ -1,10 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-undef */
-import App from '../../App.jsx';
+import ProductList from '../../../components/common/ProductList.jsx';
 
 let wrapper;
 beforeEach(() => {
-  wrapper = shallow(<App />);
+  wrapper = shallow(<ProductList />);
 });
 describe('App Component', () => {
   it('should match snapshot', () => {
