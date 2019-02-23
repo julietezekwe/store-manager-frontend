@@ -13,6 +13,16 @@ exports[`Routes Component should match snapshot 1`] = `
     exact={true}
     path="/admin"
   />
+  <Connect(AdminRoutes)
+    component={[Function]}
+    exact={true}
+    path="/admin/users"
+  />
+  <Connect(AdminRoutes)
+    component={[Function]}
+    exact={true}
+    path="/admin/sales"
+  />
   <Connect(AttendantRoutes)
     component={[Function]}
     exact={true}

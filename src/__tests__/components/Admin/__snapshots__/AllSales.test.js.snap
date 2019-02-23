@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component should match snapshot 1`] = `
+<AllSales
+  getAllSales={[Function]}
+  sales={
+    Object {
+      "sales": Object {
+        "SalesModel": Array [
+          Object {
+            "description": "fine",
+            "name": "oge",
+            "price": 1200,
+            "productid": 1,
+            "productname": "shoes",
+            "quantity": 10,
+          },
+        ],
+        "totalAmount": 10,
+        "totalProductsSold": 199,
+        "totatQuantitySold": 1,
+      },
+    }
+  }
+>
+  <div
+    className="col-8"
+  >
+    <div
+      className="center"
+    >
+      <div
+        className="col-3 "
+        id="totalProducts"
+      >
+        Total Products Sold: 
+      </div>
+      <div
+        className="col-4"
+        id="totalPrice"
+      >
+        Amount Realized: ₦ 
+        10
+      </div>
+      <div
+        className="col-3"
+        id="totalSales"
+      >
+        Unique Products No: 
+        199
+      </div>
+    </div>
+    <div
+      className="card col-11"
+    >
+      <table
+        className="table"
+      >
+        <thead>
+          <tr>
+            <th>
+              Product Id
+            </th>
+            <th>
+              Product Name
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+              Quantity
+            </th>
+            <th>
+              Price
+            </th>
+            <th>
+              Seller
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            key="0"
+          >
+            <td>
+              1
+            </td>
+            <td>
+              shoes
+            </td>
+            <td>
+              fine
+            </td>
+            <td>
+              10
+            </td>
+            <td>
+              1200
+            </td>
+            <td>
+              oge
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</AllSales>
+`;

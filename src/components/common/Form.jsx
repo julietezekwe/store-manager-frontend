@@ -6,6 +6,7 @@ import {
   editProduct,
   deleteProduct,
 } from '../../actions/productsAction';
+import { addUser, editUser, deleteUser } from '../../actions/usersAction';
 import SearchBox from './SearchBox.jsx';
 
 export class Form extends Component {
@@ -31,6 +32,7 @@ export class Form extends Component {
 
   show = (index, id) => {
     localStorage.setItem('id', id);
+
     const dialog = document.querySelectorAll('dialog');
     dialog[index].showModal();
   };
@@ -75,6 +77,38 @@ export class Form extends Component {
     this.props.deleteProduct(id);
   };
 
+  submitUser = (e) => {
+    e.preventDefault();
+    const payload = {
+      name: this.state.name,
+      username: this.state.username,
+      password: this.state.password,
+      role: this.state.role,
+      email: this.state.email,
+    };
+    this.props.addUser(payload);
+  };
+
+  updateUser = (e) => {
+    e.preventDefault();
+    const id = Number(localStorage.getItem('id'));
+    const payload = {
+      id,
+      name: this.state.name,
+      username: this.state.username,
+      password: this.state.password,
+      role: this.state.role,
+      email: this.state.email,
+    };
+    this.props.editUser(payload);
+  };
+
+  deleteUser = (e) => {
+    e.preventDefault();
+    const id = Number(localStorage.getItem('id'));
+    this.props.deleteUser(id);
+  };
+
   onFormFieldChange = (event) => {
     if (event.target.id === 'image') {
       const img = document.getElementById('image').files[0];
@@ -92,7 +126,7 @@ export class Form extends Component {
 
   render() {
     const { show, close } = this;
-    const { action, proId } = this.props;
+    const { action, proId, userId } = this.props;
     const addProduct = (
       <React.Fragment>
         <div className="col-11">
@@ -324,21 +358,213 @@ export class Form extends Component {
       </React.Fragment>
     );
 
+    const addUser = (
+      <React.Fragment>
+        <div className="col-11">
+          <button onClick={() => show(0)} id="show" className="text button">
+            Add User
+          </button>
+          <dialog>
+            <div className="modal-content">
+              <h2 className="modalHeader">Add User</h2>
+              <span
+                onClick={() => close(0)}
+                id="close"
+                className="close-button"
+              >
+                &times;
+              </span>
+              <div className="modal-body">
+                <div className="form">
+                  <form className="login" onSubmit={this.submitUser}>
+                    <div>
+                      <input
+                        id="name"
+                        type="text"
+                        placeholder="Full Name"
+                        required
+                        onChange={this.onFormFieldChange}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        id="email"
+                        type="email"
+                        placeholder="Email"
+                        required
+                        onChange={this.onFormFieldChange}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        id="username"
+                        type="text"
+                        placeholder="Username"
+                        required
+                        onChange={this.onFormFieldChange}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        id="password"
+                        type="password"
+                        placeholder="Password"
+                        required
+                        onChange={this.onFormFieldChange}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        id="role"
+                        type="text"
+                        placeholder="User Role"
+                        required
+                        onChange={this.onFormFieldChange}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="submit"
+                        value="ADD"
+                        onClick={() => close(0)}
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </dialog>
+        </div>
+      </React.Fragment>
+    );
+
+    const editUser = (
+      <React.Fragment>
+        <i className="far fa-edit trigger editUser" onClick={() => show(1, userId)} />
+        <dialog>
+          <div className="modal-content">
+            <h2 className="modalHeader">Edit Product</h2>
+            <span onClick={() => close(1)} id="close" className="close-button">
+              &times;
+            </span>
+            <div className="modal-body">
+              <div className="form">
+                <form className="login" onSubmit={this.updateUser}>
+                  <div>
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="Full Name"
+                      required
+                      onChange={this.onFormFieldChange}
+                    />
+                  </div>
+                  <div>
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="Email"
+                      required
+                      onChange={this.onFormFieldChange}
+                    />
+                  </div>
+                  <div>
+                    <input
+                      id="username"
+                      type="text"
+                      placeholder="Username"
+                      required
+                      onChange={this.onFormFieldChange}
+                    />
+                  </div>
+                  <div>
+                    <input
+                      id="password"
+                      type="password"
+                      placeholder="Password"
+                      required
+                      onChange={this.onFormFieldChange}
+                    />
+                  </div>
+                  <div>
+                    <input
+                      id="role"
+                      type="text"
+                      placeholder="User Role"
+                      required
+                      onChange={this.onFormFieldChange}
+                    />
+                  </div>
+                  <div>
+                    <input type="submit" value="ADD" onClick={() => close(1)} />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </dialog>
+      </React.Fragment>
+    );
+
+    const deleteUser = (
+      <React.Fragment>
+        <i
+          className="far fa-trash-alt trigger deleteUser"
+          onClick={() => show(2, userId)}
+          id="show"
+        />
+
+        <dialog>
+          <div className="modal-content">
+            <span onClick={() => close(2)} id="close" className="close-button">
+              &times;
+            </span>
+            <div className="modal-body">
+              <div className="form">
+                <form className="login" onSubmit={this.deleteUser}>
+                  <div className="card">
+                    <div className="product-detail">
+                      <h3 style={{ textAlign: 'center' }}>
+                        Do you want to delete this User?
+                      </h3>
+                      <button
+                        className="button delete-btn"
+                        onClick={() => close(2)}
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </dialog>
+      </React.Fragment>
+    );
+
     return (
       <React.Fragment>
         {action === 'addProduct'
           ? addProduct
-          : action === 'deleteProduct'
-            ? deleteProduct
-            : action === 'editProduct'
-              ? editProduct
-              : 'button here'}
+          : action === 'addUser'
+            ? addUser
+            : action === 'deleteProduct'
+              ? deleteProduct
+              : action === 'eidtUser'
+                ? editUser
+                : action === 'deleteUser'
+                  ? deleteUser
+                  : action === 'editProduct'
+                    ? editProduct
+                    : 'button here'}
       </React.Fragment>
     );
   }
 }
 const mapStateToProps = state => ({
   products: state.products,
+  categories: state.categories,
 });
 export default connect(
   mapStateToProps,
@@ -346,5 +572,8 @@ export default connect(
     addProduct,
     editProduct,
     deleteProduct,
+    addUser,
+    editUser,
+    deleteUser,
   },
 )(Form);
