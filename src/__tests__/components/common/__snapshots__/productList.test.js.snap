@@ -1,7 +1,1225 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App Component should match snapshot 1`] = `
-<h1>
-  Product lists here
-</h1>
+exports[`ProductList Component should match snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <ProductList
+    getAllProducts={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    login={
+      Object {
+        "isloggedIn": true,
+        "user": Object {
+          "email": "admin@gmail.com",
+          "id": 1,
+          "name": "admin",
+          "role": "admin",
+          "username": "admin",
+        },
+      }
+    }
+    products={
+      Array [
+        Object {
+          "description": "Very beautiful",
+          "id": 1,
+          "image": "image.jpg",
+          "min": 1,
+          "name": "silver shoes",
+          "price": 1000,
+          "quantity": 120,
+        },
+        Object {
+          "description": "Very beautiful",
+          "id": 2,
+          "image": "image.jpg",
+          "min": 1,
+          "name": "blue shoes",
+          "price": 10000,
+          "quantity": 1200,
+        },
+        Object {
+          "description": "Very beautiful",
+          "id": 3,
+          "image": "image.jpg",
+          "min": 1,
+          "name": "blue shoes",
+          "price": 10000,
+          "quantity": 0,
+        },
+      ]
+    }
+  >
+    <div
+      className="col-8"
+    >
+      <Connect(Form)
+        action="addProduct"
+      >
+        <Form
+          action="addProduct"
+          addProduct={[Function]}
+          deleteProduct={[Function]}
+          editProduct={[Function]}
+          products={
+            Array [
+              Object {
+                "description": "Very beautiful",
+                "id": 1,
+                "image": "image.jpg",
+                "min": 1,
+                "name": "silver shoes",
+                "price": 1000,
+                "quantity": 120,
+              },
+              Object {
+                "description": "Very beautiful",
+                "id": 2,
+                "image": "image.jpg",
+                "min": 1,
+                "name": "blue shoes",
+                "price": 10000,
+                "quantity": 1200,
+              },
+              Object {
+                "description": "Very beautiful",
+                "id": 3,
+                "image": "image.jpg",
+                "min": 1,
+                "name": "blue shoes",
+                "price": 10000,
+                "quantity": 0,
+              },
+            ]
+          }
+        >
+          <div
+            className="col-11"
+          >
+            <SearchBox>
+              <p
+                className="text-left"
+              >
+                Search by
+                <select
+                  id=""
+                  name="category"
+                >
+                  <option
+                    value="all"
+                  >
+                    All
+                  </option>
+                  <option
+                    value="Slippers"
+                  >
+                    Flat
+                  </option>
+                  <option
+                    value="Shoes"
+                  >
+                    Shoes
+                  </option>
+                </select>
+              </p>
+            </SearchBox>
+            <button
+              className="text button add"
+              id="show"
+              onClick={[Function]}
+            >
+              Add Product
+            </button>
+            <dialog>
+              <div
+                className="modal-content"
+              >
+                <h2
+                  className="modalHeader"
+                >
+                  Add Product
+                </h2>
+                <span
+                  className="close-button"
+                  id="close"
+                  onClick={[Function]}
+                >
+                  ×
+                </span>
+                <div
+                  className="modal-body"
+                >
+                  <div
+                    className="form"
+                  >
+                    <form
+                      className="login"
+                      id="submit-product"
+                      onSubmit={[Function]}
+                    >
+                      <div>
+                        <input
+                          id="productName"
+                          onChange={[Function]}
+                          placeholder="Product Name"
+                          required={true}
+                          type="text"
+                        />
+                      </div>
+                      <div>
+                        <input
+                          id="quantity"
+                          onChange={[Function]}
+                          placeholder="Quantity"
+                          required={true}
+                          type="text"
+                        />
+                      </div>
+                      <div>
+                        <input
+                          id="description"
+                          onChange={[Function]}
+                          placeholder="Description"
+                          required={true}
+                          type="text"
+                        />
+                      </div>
+                      <div>
+                        <input
+                          id="price"
+                          onChange={[Function]}
+                          placeholder="Unit Price"
+                          required={true}
+                          type="text"
+                        />
+                      </div>
+                      <div>
+                        <input
+                          id="min"
+                          onChange={[Function]}
+                          placeholder="Minimun Inventory"
+                          required={true}
+                          type="text"
+                        />
+                      </div>
+                      <div>
+                        <select
+                          id="category"
+                          name="category"
+                          onChange={[Function]}
+                        >
+                          category
+                          <option
+                            value=""
+                          >
+                            select
+                          </option>
+                          <option
+                            value="flat"
+                          >
+                            Flat
+                          </option>
+                          <option
+                            value="hill"
+                          >
+                            Hills
+                          </option>
+                          <option
+                            value="casuals"
+                          >
+                            Casuals
+                          </option>
+                        </select>
+                      </div>
+                      <div>
+                        <input
+                          id="image"
+                          onChange={[Function]}
+                          placeholder="Upload Image"
+                          type="file"
+                        />
+                      </div>
+                      <div>
+                        <input
+                          onClick={[Function]}
+                          type="submit"
+                          value="ADD"
+                        />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </dialog>
+          </div>
+        </Form>
+      </Connect(Form)>
+      <div
+        className="myCard col-3"
+        key="1"
+      >
+        <div
+          className="ribbon ribbon-top-left"
+        >
+          <span>
+                 In Stock (
+            120
+            )
+          </span>
+        </div>
+        <img
+          alt="Avatar"
+          src="image.jpg"
+        />
+        <div
+          className="product-detail"
+        >
+          <h3
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <a
+              href="/products/1"
+            />
+             
+          </h3>
+          <p
+            className="text-left"
+          >
+            <i
+              className="fas fa-dollar-sign"
+            />
+             
+            1000
+          </p>
+          <div
+            className="text"
+          >
+            <Connect(Form)
+              action="editProduct"
+              proId={1}
+            >
+              <Form
+                action="editProduct"
+                addProduct={[Function]}
+                deleteProduct={[Function]}
+                editProduct={[Function]}
+                proId={1}
+                products={
+                  Array [
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 1,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "silver shoes",
+                      "price": 1000,
+                      "quantity": 120,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 2,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 1200,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 3,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 0,
+                    },
+                  ]
+                }
+              >
+                <i
+                  className="far fa-edit trigger edit"
+                  onClick={[Function]}
+                />
+                <dialog>
+                  <div
+                    className="modal-content"
+                  >
+                    <h2
+                      className="modalHeader"
+                    >
+                      Edit Product
+                    </h2>
+                    <span
+                      className="close-button"
+                      id="close"
+                      onClick={[Function]}
+                    >
+                      ×
+                    </span>
+                    <div
+                      className="modal-body"
+                    >
+                      <div
+                        className="form"
+                      >
+                        <form
+                          className="login"
+                          onSubmit={[Function]}
+                        >
+                          <div>
+                            <input
+                              id="productName"
+                              onChange={[Function]}
+                              placeholder="Product Name"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="quantity"
+                              onChange={[Function]}
+                              placeholder="Quantity"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="description"
+                              onChange={[Function]}
+                              placeholder="Description"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="price"
+                              onChange={[Function]}
+                              placeholder="Unit Price"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="min"
+                              onChange={[Function]}
+                              placeholder="Minimun Inventory"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <select
+                              id="category"
+                              name="category"
+                              onChange={[Function]}
+                            >
+                              category
+                              <option
+                                value=""
+                              >
+                                select
+                              </option>
+                              <option
+                                value="flat"
+                              >
+                                Flat
+                              </option>
+                              <option
+                                value="hill"
+                              >
+                                Hills
+                              </option>
+                              <option
+                                value="casuals"
+                              >
+                                Casuals
+                              </option>
+                            </select>
+                          </div>
+                          <div>
+                            <input
+                              id="imageEdit"
+                              onChange={[Function]}
+                              placeholder="Upload Image"
+                              type="file"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              onClick={[Function]}
+                              type="submit"
+                              value="Update"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+              </Form>
+            </Connect(Form)>
+            <Connect(Form)
+              action="deleteProduct"
+              proId={1}
+            >
+              <Form
+                action="deleteProduct"
+                addProduct={[Function]}
+                deleteProduct={[Function]}
+                editProduct={[Function]}
+                proId={1}
+                products={
+                  Array [
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 1,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "silver shoes",
+                      "price": 1000,
+                      "quantity": 120,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 2,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 1200,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 3,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 0,
+                    },
+                  ]
+                }
+              >
+                <i
+                  className="far fa-trash-alt trigger delete"
+                  id="show"
+                  onClick={[Function]}
+                />
+                <dialog>
+                  <div
+                    className="modal-content"
+                  >
+                    <span
+                      className="close-button"
+                      id="close"
+                      onClick={[Function]}
+                    >
+                      ×
+                    </span>
+                    <div
+                      className="modal-body"
+                    >
+                      <div
+                        className="form"
+                      >
+                        <form
+                          className="login"
+                          onSubmit={[Function]}
+                        >
+                          <div
+                            className="card"
+                          >
+                            <div
+                              className="product-detail"
+                            >
+                              <h3
+                                style={
+                                  Object {
+                                    "textAlign": "center",
+                                  }
+                                }
+                              >
+                                Do you want to delete this product?
+                              </h3>
+                              <button
+                                className="button delete-btn"
+                                onClick={[Function]}
+                              >
+                                Delete
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+              </Form>
+            </Connect(Form)>
+          </div>
+        </div>
+      </div>
+      <div
+        className="myCard col-3"
+        key="2"
+      >
+        <div
+          className="ribbon ribbon-top-left"
+        >
+          <span>
+                 In Stock (
+            1200
+            )
+          </span>
+        </div>
+        <img
+          alt="Avatar"
+          src="image.jpg"
+        />
+        <div
+          className="product-detail"
+        >
+          <h3
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <a
+              href="/products/2"
+            />
+             
+          </h3>
+          <p
+            className="text-left"
+          >
+            <i
+              className="fas fa-dollar-sign"
+            />
+             
+            10000
+          </p>
+          <div
+            className="text"
+          >
+            <Connect(Form)
+              action="editProduct"
+              proId={2}
+            >
+              <Form
+                action="editProduct"
+                addProduct={[Function]}
+                deleteProduct={[Function]}
+                editProduct={[Function]}
+                proId={2}
+                products={
+                  Array [
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 1,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "silver shoes",
+                      "price": 1000,
+                      "quantity": 120,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 2,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 1200,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 3,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 0,
+                    },
+                  ]
+                }
+              >
+                <i
+                  className="far fa-edit trigger edit"
+                  onClick={[Function]}
+                />
+                <dialog>
+                  <div
+                    className="modal-content"
+                  >
+                    <h2
+                      className="modalHeader"
+                    >
+                      Edit Product
+                    </h2>
+                    <span
+                      className="close-button"
+                      id="close"
+                      onClick={[Function]}
+                    >
+                      ×
+                    </span>
+                    <div
+                      className="modal-body"
+                    >
+                      <div
+                        className="form"
+                      >
+                        <form
+                          className="login"
+                          onSubmit={[Function]}
+                        >
+                          <div>
+                            <input
+                              id="productName"
+                              onChange={[Function]}
+                              placeholder="Product Name"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="quantity"
+                              onChange={[Function]}
+                              placeholder="Quantity"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="description"
+                              onChange={[Function]}
+                              placeholder="Description"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="price"
+                              onChange={[Function]}
+                              placeholder="Unit Price"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="min"
+                              onChange={[Function]}
+                              placeholder="Minimun Inventory"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <select
+                              id="category"
+                              name="category"
+                              onChange={[Function]}
+                            >
+                              category
+                              <option
+                                value=""
+                              >
+                                select
+                              </option>
+                              <option
+                                value="flat"
+                              >
+                                Flat
+                              </option>
+                              <option
+                                value="hill"
+                              >
+                                Hills
+                              </option>
+                              <option
+                                value="casuals"
+                              >
+                                Casuals
+                              </option>
+                            </select>
+                          </div>
+                          <div>
+                            <input
+                              id="imageEdit"
+                              onChange={[Function]}
+                              placeholder="Upload Image"
+                              type="file"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              onClick={[Function]}
+                              type="submit"
+                              value="Update"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+              </Form>
+            </Connect(Form)>
+            <Connect(Form)
+              action="deleteProduct"
+              proId={2}
+            >
+              <Form
+                action="deleteProduct"
+                addProduct={[Function]}
+                deleteProduct={[Function]}
+                editProduct={[Function]}
+                proId={2}
+                products={
+                  Array [
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 1,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "silver shoes",
+                      "price": 1000,
+                      "quantity": 120,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 2,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 1200,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 3,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 0,
+                    },
+                  ]
+                }
+              >
+                <i
+                  className="far fa-trash-alt trigger delete"
+                  id="show"
+                  onClick={[Function]}
+                />
+                <dialog>
+                  <div
+                    className="modal-content"
+                  >
+                    <span
+                      className="close-button"
+                      id="close"
+                      onClick={[Function]}
+                    >
+                      ×
+                    </span>
+                    <div
+                      className="modal-body"
+                    >
+                      <div
+                        className="form"
+                      >
+                        <form
+                          className="login"
+                          onSubmit={[Function]}
+                        >
+                          <div
+                            className="card"
+                          >
+                            <div
+                              className="product-detail"
+                            >
+                              <h3
+                                style={
+                                  Object {
+                                    "textAlign": "center",
+                                  }
+                                }
+                              >
+                                Do you want to delete this product?
+                              </h3>
+                              <button
+                                className="button delete-btn"
+                                onClick={[Function]}
+                              >
+                                Delete
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+              </Form>
+            </Connect(Form)>
+          </div>
+        </div>
+      </div>
+      <div
+        className="myCard col-3"
+        key="3"
+      >
+        <div
+          className="ribbon ribbon-top-left"
+        >
+          <span
+            style={
+              Object {
+                "background": "red",
+              }
+            }
+          >
+             
+                Out of stock
+          </span>
+        </div>
+        <img
+          alt="Avatar"
+          src="image.jpg"
+        />
+        <div
+          className="product-detail"
+        >
+          <h3
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <a
+              href="/products/3"
+            />
+             
+          </h3>
+          <p
+            className="text-left"
+          >
+            <i
+              className="fas fa-dollar-sign"
+            />
+             
+            10000
+          </p>
+          <div
+            className="text"
+          >
+            <Connect(Form)
+              action="editProduct"
+              proId={3}
+            >
+              <Form
+                action="editProduct"
+                addProduct={[Function]}
+                deleteProduct={[Function]}
+                editProduct={[Function]}
+                proId={3}
+                products={
+                  Array [
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 1,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "silver shoes",
+                      "price": 1000,
+                      "quantity": 120,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 2,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 1200,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 3,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 0,
+                    },
+                  ]
+                }
+              >
+                <i
+                  className="far fa-edit trigger edit"
+                  onClick={[Function]}
+                />
+                <dialog>
+                  <div
+                    className="modal-content"
+                  >
+                    <h2
+                      className="modalHeader"
+                    >
+                      Edit Product
+                    </h2>
+                    <span
+                      className="close-button"
+                      id="close"
+                      onClick={[Function]}
+                    >
+                      ×
+                    </span>
+                    <div
+                      className="modal-body"
+                    >
+                      <div
+                        className="form"
+                      >
+                        <form
+                          className="login"
+                          onSubmit={[Function]}
+                        >
+                          <div>
+                            <input
+                              id="productName"
+                              onChange={[Function]}
+                              placeholder="Product Name"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="quantity"
+                              onChange={[Function]}
+                              placeholder="Quantity"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="description"
+                              onChange={[Function]}
+                              placeholder="Description"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="price"
+                              onChange={[Function]}
+                              placeholder="Unit Price"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="min"
+                              onChange={[Function]}
+                              placeholder="Minimun Inventory"
+                              required={true}
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <select
+                              id="category"
+                              name="category"
+                              onChange={[Function]}
+                            >
+                              category
+                              <option
+                                value=""
+                              >
+                                select
+                              </option>
+                              <option
+                                value="flat"
+                              >
+                                Flat
+                              </option>
+                              <option
+                                value="hill"
+                              >
+                                Hills
+                              </option>
+                              <option
+                                value="casuals"
+                              >
+                                Casuals
+                              </option>
+                            </select>
+                          </div>
+                          <div>
+                            <input
+                              id="imageEdit"
+                              onChange={[Function]}
+                              placeholder="Upload Image"
+                              type="file"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              onClick={[Function]}
+                              type="submit"
+                              value="Update"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+              </Form>
+            </Connect(Form)>
+            <Connect(Form)
+              action="deleteProduct"
+              proId={3}
+            >
+              <Form
+                action="deleteProduct"
+                addProduct={[Function]}
+                deleteProduct={[Function]}
+                editProduct={[Function]}
+                proId={3}
+                products={
+                  Array [
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 1,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "silver shoes",
+                      "price": 1000,
+                      "quantity": 120,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 2,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 1200,
+                    },
+                    Object {
+                      "description": "Very beautiful",
+                      "id": 3,
+                      "image": "image.jpg",
+                      "min": 1,
+                      "name": "blue shoes",
+                      "price": 10000,
+                      "quantity": 0,
+                    },
+                  ]
+                }
+              >
+                <i
+                  className="far fa-trash-alt trigger delete"
+                  id="show"
+                  onClick={[Function]}
+                />
+                <dialog>
+                  <div
+                    className="modal-content"
+                  >
+                    <span
+                      className="close-button"
+                      id="close"
+                      onClick={[Function]}
+                    >
+                      ×
+                    </span>
+                    <div
+                      className="modal-body"
+                    >
+                      <div
+                        className="form"
+                      >
+                        <form
+                          className="login"
+                          onSubmit={[Function]}
+                        >
+                          <div
+                            className="card"
+                          >
+                            <div
+                              className="product-detail"
+                            >
+                              <h3
+                                style={
+                                  Object {
+                                    "textAlign": "center",
+                                  }
+                                }
+                              >
+                                Do you want to delete this product?
+                              </h3>
+                              <button
+                                className="button delete-btn"
+                                onClick={[Function]}
+                              >
+                                Delete
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+              </Form>
+            </Connect(Form)>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ProductList>
+</Provider>
 `;

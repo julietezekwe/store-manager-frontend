@@ -8,9 +8,10 @@ import NavBar from './components/common/NavBar.jsx';
 import Footer from './components/common/Footer.jsx';
 
 
-class App extends Component {
+export class App extends Component {
     handleLogout = () => {
       localStorage.removeItem('user');
+      localStorage.removeItem('token');
       window.location.reload();
     }
 

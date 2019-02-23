@@ -1,6 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-undef */
-import sinon from 'sinon';
 import { Login } from '../../../components/common/Login.jsx';
 
 let wrapper;

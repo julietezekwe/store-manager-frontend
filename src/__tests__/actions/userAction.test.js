@@ -39,7 +39,6 @@ describe('Login actions', () => {
         payload: {
           id: 1,
           email: 'admin@gmail.com',
-          token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwidXNlcm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiam9pbmVkIjoiMjAxOS0wMi0xNFQxNDowOTo1MC40NzhaIiwiaWF0IjoxNTUwODAwNzM0LCJleHAiOjE1NTExNjA3MzR9.lxSXfDQEvRPj6PYy5RPuO_5QoYVs6dV01Od4KBW-cRc',
           username: 'admin',
           role: 'admin',
           exp: 1551160734,
@@ -60,7 +59,7 @@ describe('Login actions', () => {
         .then(() => {
           expect(store.getActions()).toEqual(expectedActions);
           expect(localStorage.getItem('user'))
-            .toEqual('{"id":1,"name":"admin","username":"admin","email":"admin@gmail.com","role":"admin","joined":"2019-02-14T14:09:50.478Z","iat":1550800734,"exp":1551160734,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwidXNlcm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiam9pbmVkIjoiMjAxOS0wMi0xNFQxNDowOTo1MC40NzhaIiwiaWF0IjoxNTUwODAwNzM0LCJleHAiOjE1NTExNjA3MzR9.lxSXfDQEvRPj6PYy5RPuO_5QoYVs6dV01Od4KBW-cRc"}');
+            .toEqual('{"id":1,"name":"admin","username":"admin","email":"admin@gmail.com","role":"admin","joined":"2019-02-14T14:09:50.478Z","iat":1550800734,"exp":1551160734}');
           done();
         });
     },
