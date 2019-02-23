@@ -43,12 +43,4 @@ describe('Checkout Component', () => {
     expect(wrapper.instance().handleRemoveFromCart.calledOnce)
       .toEqual(true);
   });
-  it('calls onQuantityChange()', () => {
-    sinon.spy(wrapper.instance(), 'onQuantityChange');
-    // wrapper.instance().onQuantityChange(1).debug();
-    console.log(wrapper.instance().onQuantityChange(2, 2, 1000).debug());
-    // expect(wrapper.instance().onQuantityChange.calledOnce)
-    //   .toEqual(true);
-    // expect(wrapper.instance().onFormFieldChange.calledWith(1, 2, 200));
-  });
 });

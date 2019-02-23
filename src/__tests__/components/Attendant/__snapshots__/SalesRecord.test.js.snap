@@ -13,7 +13,7 @@ exports[`SalesRecord Component should match snapshot 1`] = `
         },
         "saleDetail": Array [
           Object {
-            "created_at": 2019-02-23T17:57:44.454Z,
+            "created_at": 2019-02-23T18:18:22.556Z,
             "description": "fine",
             "price": 1200,
             "productid": 1,

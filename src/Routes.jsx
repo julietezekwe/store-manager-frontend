@@ -8,7 +8,7 @@ import ProductDetails from './components/common/ProductDetails.jsx';
 import AdminRoutes from './AdminRoutes.jsx';
 import AttendantRoutes from './AttendantRoutes.jsx';
 import CommonRoutes from './CommonRoutes.jsx';
-import SalesRecord from './components/Attendant/SalesRecord.jsx';
+import SalesRecord from './components/Attendant/SalesRecord.jsx'; 
 import Checkout from './components/Attendant/Checkout.jsx';
 
 const Routes = () => (
