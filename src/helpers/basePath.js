@@ -1,1 +1,1 @@
-export default 'http://localhost:8000/api/v1';
+export default 'https://store-manager-develop.herokuapp.com/api/v1';

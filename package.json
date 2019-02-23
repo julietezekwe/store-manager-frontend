@@ -4,11 +4,13 @@
   "description": "Store Manager is a web application that helps store owners manage sales and product inventory.",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build",
+    "start": "node server.js",
     "start:dev": "webpack-dev-server --open --hot --config ./webpack.dev.js",
     "build": "webpack --config ./webpack.prod.js",
     "test": "jest --config=jest.config.json --env=jsdom  --u --coverage --colors",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "heroku-prebuild": "npm run-script install",
+    "heroku-postbuild": "npm run-script build"
   },
   "repository": {
     "type": "git",
@@ -77,6 +79,7 @@
     "store": "^2.0.12",
     "style-loader": "^0.23.1",
     "sweetalert": "^2.1.2",
+    "terser-webpack-plugin": "^1.2.2",
     "transfer-webpack-plugin": "^0.1.4",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "url-loader": "^1.1.2",

@@ -19,9 +19,11 @@ exports[`ProductDetail Component should match snapshot 1`] = `
     className=" description"
   >
     <div
-      className="col-5 "
+      className="col-2 "
       style={
         Object {
+          "marginLeft": "80px",
+          "marginRight": "40px",
           "marginTop": "30px",
         }
       }

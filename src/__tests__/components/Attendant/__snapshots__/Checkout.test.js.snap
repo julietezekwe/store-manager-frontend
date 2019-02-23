@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkout Component should match snapshot 1`] = `
+<Checkout
+  getAllCartProducts={[Function]}
+  handleCheckout={[Function]}
+  login={
+    Object {
+      "user": Object {
+        "email": "chidimma@yahoo.com",
+        "id": 3,
+        "name": "chidimma",
+        "role": "attendant",
+        "username": "chidimma",
+      },
+    }
+  }
+  sales={
+    Object {
+      "cart": Object {
+        "cartProductDetails": Array [
+          Array [
+            Object {
+              "created_at": 2019-02-23T18:18:15.992Z,
+              "description": "fine",
+              "id": 1,
+              "price": 1200,
+              "productname": "shoes",
+              "quantity": 10,
+            },
+          ],
+        ],
+      },
+    }
+  }
+>
+  <div
+    className="col-8"
+  >
+    <div
+      className="card col-12"
+      style={
+        Object {
+          "float": "none",
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": "35px",
+          "textAlign": "center",
+        }
+      }
+    >
+      <div
+        className="card col-9"
+        id="alert"
+      />
+      <table
+        className="table"
+        id="checkout"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <thead>
+          <tr>
+            <th>
+              S/N
+            </th>
+            <th>
+              Product Name
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+              ID
+            </th>
+            <th />
+            <th>
+              Quantity
+            </th>
+            <th>
+              Amount (₦)
+            </th>
+            <th>
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            key="1"
+          >
+            <td>
+              1
+            </td>
+            <td>
+              shoes
+            </td>
+            <td>
+              fine
+            </td>
+            <td>
+              1
+            </td>
+            <td>
+              <input
+                min="1"
+                onChange={[Function]}
+                style={
+                  Object {
+                    "textAlign": "center",
+                    "width": "50px",
+                  }
+                }
+                type="number"
+              />
+               
+            </td>
+            <td
+              id="Q1"
+            >
+              1
+            </td>
+            <td
+              id={1}
+            >
+              1200
+            </td>
+            <td>
+              <i
+                className="far fa-trash-alt trigger"
+                onClick={[Function]}
+              />
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td
+              colSpan="5"
+            />
+            <td>
+              Total Price 
+            </td>
+            <td
+              id="totalPrice"
+            />
+          </tr>
+          <tr>
+            <td
+              colSpan="2"
+            >
+              <button
+                className="button"
+                onClick={[Function]}
+              >
+                Checkout Now
+              </button>
+            </td>
+            <td
+              colSpan="4"
+            />
+            <td
+              colSpan="2"
+            />
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</Checkout>
+`;

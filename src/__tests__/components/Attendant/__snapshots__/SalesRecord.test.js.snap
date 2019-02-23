@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SalesRecord Component should match snapshot 1`] = `
+<SalesRecord
+  getPersonalSales={[Function]}
+  sales={
+    Object {
+      "mySales": Object {
+        "records": Object {
+          "amount": 12099,
+          "totalProducts": 10,
+          "totalSales": 4,
+        },
+        "saleDetail": Array [
+          Object {
+            "created_at": 2019-02-23T18:18:22.556Z,
+            "description": "fine",
+            "price": 1200,
+            "productid": 1,
+            "productname": "shoes",
+            "quantity": 10,
+          },
+        ],
+      },
+    }
+  }
+  user={
+    Object {
+      "email": "chidimma@yahoo.com",
+      "id": 3,
+      "name": "chidimma",
+      "role": "attendant",
+      "username": "chidimma",
+    }
+  }
+>
+  <div
+    className="col-8"
+  >
+    <div
+      className="center"
+    >
+      <div
+        className="col-3 "
+        id="totalProducts"
+      >
+        Total Products Sold:
+         
+        10
+      </div>
+      <div
+        className="col-4"
+        id="totalPrice"
+      >
+        Amount Realized: ₦
+         
+        12099
+      </div>
+      <div
+        className="col-3"
+        id="totalSales"
+      >
+        Number of sales: 
+        4
+      </div>
+    </div>
+    <div
+      className="card col-11"
+    >
+      <table
+        className="table"
+      >
+        <thead>
+          <tr>
+            <th>
+              Product Id
+            </th>
+            <th>
+              Product Name
+            </th>
+            <th>
+              Quantity
+            </th>
+            <th>
+              Price
+            </th>
+            <th>
+              Seller
+            </th>
+            <th>
+              Date
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            key="0"
+          >
+            <td>
+              1
+            </td>
+            <td>
+              shoes
+            </td>
+            <td>
+              10
+            </td>
+            <td>
+              1200
+            </td>
+            <td>
+              chidimma
+            </td>
+            <td>
+              2019-02-23
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</SalesRecord>
+`;

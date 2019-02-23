@@ -38,5 +38,15 @@ exports[`Routes Component should match snapshot 1`] = `
     exact={true}
     path="/attendant"
   />
+  <Connect(AttendantRoutes)
+    component={[Function]}
+    exact={true}
+    path="/attendant/sales"
+  />
+  <Connect(AttendantRoutes)
+    component={[Function]}
+    exact={true}
+    path="/attendant/checkout"
+  />
 </Switch>
 `;

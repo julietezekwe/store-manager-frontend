@@ -54,17 +54,17 @@ let wrapper;
 beforeEach(() => {
   wrapper = mount(
     <Provider store={store}>
-        <ProductList {...props} />
-</Provider>,
+      <ProductList {...props} />
+    </Provider>,
   );
 });
 
 describe('ProductList Component', () => {
   it('should match snapshot', () => {
     mount(
-        <Provider store={store}>
-            <ConnectedProductList />
-    </Provider>,
+      <Provider store={store}>
+        <ConnectedProductList />
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -87,21 +87,21 @@ describe('ProductList Component', () => {
     const newProps = {
       ...props,
       login:
-        {
-          ...props.login,
-          user: {
-            id: 2,
-            role: 'attendant',
-            name: 'attendant',
-            username: 'attendant',
-            email: 'attendant@gmail.com',
-          },
+      {
+        ...props.login,
+        user: {
+          id: 2,
+          role: 'attendant',
+          name: 'attendant',
+          username: 'attendant',
+          email: 'attendant@gmail.com',
         },
+      },
     };
     const wrapper = mount(
-            <Provider store={store}>
-                <ProductList {...newProps} />
-        </Provider>,
+      <Provider store={store}>
+        <ProductList {...newProps} />
+      </Provider>,
     );
     localStorage.setItem(2, '{"cartNo":[2]}'); // Products added to cart by the logged in attendant
     const productComponent = wrapper.find('ProductList').instance();

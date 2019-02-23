@@ -8,6 +8,8 @@ import ProductDetails from './components/common/ProductDetails.jsx';
 import AdminRoutes from './AdminRoutes.jsx';
 import AttendantRoutes from './AttendantRoutes.jsx';
 import CommonRoutes from './CommonRoutes.jsx';
+import SalesRecord from './components/Attendant/SalesRecord.jsx'; 
+import Checkout from './components/Attendant/Checkout.jsx';
 
 const Routes = () => (
   <Switch >
@@ -26,6 +28,12 @@ const Routes = () => (
       component={ProductDetails} />
     <AttendantRoutes exact
       path="/attendant" component={ProductList} />
+      <AttendantRoutes
+      exact path="/attendant/sales"
+      component={SalesRecord} />
+    <AttendantRoutes
+      exact path="/attendant/checkout"
+      component={Checkout} />
   </Switch>
 );
 
