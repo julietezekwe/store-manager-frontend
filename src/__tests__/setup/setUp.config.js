@@ -1,4 +1,6 @@
 /* eslint no-use-before-define: 0 */
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-undef */
 import 'babel-polyfill';
 import sinon from 'sinon';
 import React from 'react';

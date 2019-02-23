@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductDetail Component should match snapshot 1`] = `
+<ProductDetail
+  getAproduct={[Function]}
+  productDetail={
+    Object {
+      "description": "fine",
+      "image": "imag.url",
+      "min": 1,
+      "price": 1200,
+      "productid": 1,
+      "productname": "shoes",
+      "quantity": 10,
+    }
+  }
+>
+  <div
+    className=" description"
+  >
+    <div
+      className="col-5 "
+      style={
+        Object {
+          "marginTop": "30px",
+        }
+      }
+    >
+      <img
+        alt="Products"
+        src="imag.url"
+      />
+    </div>
+    <br />
+    <h2>
+      shoes
+    </h2>
+    <h3>
+       
+      Description: 
+      <p>
+        fine
+      </p>
+       
+    </h3>
+    <br />
+    <h3>
+      Stock : 
+      <p>
+         
+        10
+         
+      </p>
+    </h3>
+     
+    <br />
+    <h3>
+      Price : 
+      <p>
+        1200
+      </p>
+       
+    </h3>
+     
+    <br />
+    <h3>
+      minimum inventory quantity : 
+      <p>
+        1
+      </p>
+       
+    </h3>
+     
+    <br />
+    <h3>
+      Creation Date : 
+      <p />
+       
+    </h3>
+     
+    <br />
+    <h3>
+      Category : 
+      <p />
+       
+    </h3>
+     
+    <br />
+    <h3>
+      Features
+    </h3>
+    <p>
+      Long Lasting, 
+    </p>
+    <p>
+      Durable, 
+    </p>
+  </div>
+</ProductDetail>
+`;

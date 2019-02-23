@@ -202,6 +202,10 @@ html {
   }
   .text {
     float: right;
+    color: rgb(121, 54, 4);
+    display: inline-block;
+    padding: 10px;
+    margin-top: 12px;
   }
   .myCard .col-3 {
     width: 30%;
