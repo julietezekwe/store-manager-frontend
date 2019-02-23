@@ -11,7 +11,11 @@ export class ProductDetail extends Component {
     const { productDetail } = this.props;
     return (
       <div className=" description">
-        <div className="col-5 " style={{ marginTop: '30px' }}>
+        <div className="col-2 " style={{
+          marginTop: '30px',
+          marginLeft: '80px',
+          marginRight: '40px',
+        }}>
           <img src={productDetail && productDetail.image} alt="Products" />
         </div>
         <br />
