@@ -1,7 +1,6 @@
-import 'babel-polyfill';
-import React from 'react';
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-undef */
 import { MemoryRouter, Redirect } from 'react-router-dom';
-import { shallow, mount } from 'enzyme';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';

@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import ConnectedProductList, { ProductList } from '../../../components/common/ProductList.jsx';
 
+sinon.stub(window.location, 'reload');
 const mockStore = configureStore([thunk]);
 const props = {
   getAllProducts: jest.fn(),

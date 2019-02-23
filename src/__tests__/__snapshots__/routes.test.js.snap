@@ -8,6 +8,11 @@ exports[`Routes Component should match snapshot 1`] = `
     exact={true}
     path="/"
   />
+  <Connect(CommonRoutes)
+    component={[Function]}
+    exact={true}
+    path="/products/:id"
+  />
   <Connect(AdminRoutes)
     component={[Function]}
     exact={true}
@@ -22,6 +27,11 @@ exports[`Routes Component should match snapshot 1`] = `
     component={[Function]}
     exact={true}
     path="/admin/sales"
+  />
+  <Connect(CommonRoutes)
+    component={[Function]}
+    exact={true}
+    path="/products/:id"
   />
   <Connect(AttendantRoutes)
     component={[Function]}

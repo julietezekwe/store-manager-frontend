@@ -4,15 +4,15 @@ import { MemoryRouter, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import ProductList from '../components/common/ProductList.jsx';
-import ConnectedAttendant,
-{ AttendantRoutes } from '../AttendantRoutes.jsx';
+import ProductDetails from '../components/common/ProductDetails.jsx';
+import ConnectedCommon,
+{ CommonRoutes } from '../CommonRoutes.jsx';
 
 const mockStore = configureMockStore([thunk]);
 const store = mockStore({});
 
 const props = {
-  component: ProductList,
+  component: ProductDetails,
   login: {
     isLoggedIn: true,
     user: { role: '' },
@@ -21,9 +21,9 @@ const props = {
 };
 
 const wrapper = mount(<MemoryRouter>
-  <AttendantRoutes {...props} />
+  <CommonRoutes {...props} />
 </MemoryRouter>);
-describe('<PrivateRoute />', () => {
+describe('<CommonRoutes />', () => {
   it(
     `renders a redirect component when a user tries to access
     an admin route`,
@@ -37,7 +37,7 @@ describe('<ConnectedAdminRoute>', () => {
   it('should match snapshot', () => {
     const connectWrapper = shallow(
         <Provider store={store}>
-            <ConnectedAttendant/>
+            <ConnectedCommon/>
         </Provider>,
     );
     expect(connectWrapper).toMatchSnapshot();

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Attendant from './components/Attendant/Attendant.jsx';
@@ -9,6 +9,7 @@ export const AttendantRoutes = ({
   login,
   ...rest
 }) => (
+  <Switch>
     <Route
         {...rest}
         render={props => (login.isLoggedIn && login.user.role === 'attendant'
@@ -20,6 +21,7 @@ export const AttendantRoutes = ({
           )
           : (<Redirect to='/' />))}
     />
+    </Switch>
 );
 
 AttendantRoutes.propTypes = {
