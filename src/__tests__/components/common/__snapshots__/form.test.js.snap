@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginForm /> renders correctly 1`] = `
+<Fragment>
+  <div
+    className="col-11"
+  >
+    <SearchBox />
+    <button
+      className="text button add"
+      id="show"
+      onClick={[Function]}
+    >
+      Add Product
+    </button>
+    <dialog>
+      <div
+        className="modal-content"
+      >
+        <h2
+          className="modalHeader"
+        >
+          Add Product
+        </h2>
+        <span
+          className="close-button"
+          id="close"
+          onClick={[Function]}
+        >
+          ×
+        </span>
+        <div
+          className="modal-body"
+        >
+          <div
+            className="form"
+          >
+            <form
+              className="login"
+              id="submit-product"
+              onSubmit={[Function]}
+            >
+              <div>
+                <input
+                  id="productName"
+                  onChange={[Function]}
+                  placeholder="Product Name"
+                  required={true}
+                  type="text"
+                />
+              </div>
+              <div>
+                <input
+                  id="quantity"
+                  onChange={[Function]}
+                  placeholder="Quantity"
+                  required={true}
+                  type="text"
+                />
+              </div>
+              <div>
+                <input
+                  id="description"
+                  onChange={[Function]}
+                  placeholder="Description"
+                  required={true}
+                  type="text"
+                />
+              </div>
+              <div>
+                <input
+                  id="price"
+                  onChange={[Function]}
+                  placeholder="Unit Price"
+                  required={true}
+                  type="text"
+                />
+              </div>
+              <div>
+                <input
+                  id="min"
+                  onChange={[Function]}
+                  placeholder="Minimun Inventory"
+                  required={true}
+                  type="text"
+                />
+              </div>
+              <div>
+                <select
+                  id="category"
+                  name="category"
+                  onChange={[Function]}
+                >
+                  category
+                  <option
+                    value=""
+                  >
+                    select
+                  </option>
+                  <option
+                    value="flat"
+                  >
+                    Flat
+                  </option>
+                  <option
+                    value="hill"
+                  >
+                    Hills
+                  </option>
+                  <option
+                    value="casuals"
+                  >
+                    Casuals
+                  </option>
+                </select>
+              </div>
+              <div>
+                <input
+                  id="image"
+                  onChange={[Function]}
+                  placeholder="Upload Image"
+                  type="file"
+                />
+              </div>
+              <div>
+                <input
+                  onClick={[Function]}
+                  type="submit"
+                  value="ADD"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </div>
+</Fragment>
+`;

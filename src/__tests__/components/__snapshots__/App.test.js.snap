@@ -1,7 +1,309 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App Component should match snapshot 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(App)
+    login={
+      Object {
+        "isloggedIn": true,
+        "user": Object {
+          "email": "admin@gmail.com",
+          "id": 1,
+          "name": "admin",
+          "role": "admin",
+          "username": "admin",
+        },
+      }
+    }
+  >
+    <App
+      dispatch={[Function]}
+      login={
+        Object {
+          "isloggedIn": true,
+          "user": Object {
+            "email": "admin@gmail.com",
+            "id": 1,
+            "name": "admin",
+            "role": "admin",
+            "username": "admin",
+          },
+        }
+      }
+    >
+      <NavBar
+        logout={[Function]}
+        user={
+          Object {
+            "email": "admin@gmail.com",
+            "id": 1,
+            "name": "admin",
+            "role": "admin",
+            "username": "admin",
+          }
+        }
+      >
+        <header
+          id="header"
+        >
+          <nav>
+             
+            <div
+              className="logo"
+            >
+              <i
+                className="fab fa-stripe-s"
+              />
+              tore 
+              <i
+                className="fab fa-medium-m"
+              />
+              anager
+            </div>
+            <ul>
+              <i />
+              <li>
+                <i
+                  className="fas fa-user-lock"
+                />
+                admin
+              </li>
+              <li>
+                <i
+                  className="fas fa-sign-in-alt"
+                >
+                   
+                  <span
+                    onClick={[Function]}
+                  >
+                     Logout
+                  </span>
+                </i>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </NavBar>
+      <BrowserRouter>
+        <Router
+          history={
+            Object {
+              "action": "POP",
+              "block": [Function],
+              "createHref": [Function],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+        >
+          <Routes>
+            <Switch>
+              <Route
+                component={[Function]}
+                computedMatch={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                default={true}
+                exact={true}
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                path="/"
+              >
+                <Connect(Login)
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "createHref": [Function],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                >
+                  <Login
+                    history={
+                      Object {
+                        "action": "POP",
+                        "block": [Function],
+                        "createHref": [Function],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        "push": [Function],
+                        "replace": [Function],
+                      }
+                    }
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      }
+                    }
+                    login={
+                      Object {
+                        "isloggedIn": true,
+                        "user": Object {
+                          "email": "admin@gmail.com",
+                          "id": 1,
+                          "name": "admin",
+                          "role": "admin",
+                          "username": "admin",
+                        },
+                      }
+                    }
+                    loginUser={[Function]}
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/",
+                        "url": "/",
+                      }
+                    }
+                  >
+                    <section
+                      className="login-page"
+                    >
+                      <div
+                        className="login-form"
+                      >
+                        <h1
+                          className="login-heading"
+                        >
+                          Log In
+                        </h1>
+                        <div
+                          className="myCard col-9"
+                          id="alert"
+                        />
+                        <div
+                          className="form login"
+                        >
+                          <div>
+                            <input
+                              id="email"
+                              onChange={[Function]}
+                              placeholder="Email"
+                              required={true}
+                              type="email"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              id="password"
+                              onChange={[Function]}
+                              placeholder="password"
+                              required={true}
+                              type="password"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              onClick={[Function]}
+                              type="submit"
+                              value="LOG IN"
+                            />
+                          </div>
+                          <div
+                            className="forgotpassword"
+                          >
+                            <p>
+                              <i>
+                                Forgot Password?
+                              </i>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </Login>
+                </Connect(Login)>
+              </Route>
+            </Switch>
+          </Routes>
+        </Router>
+      </BrowserRouter>
+      <Footer>
+        <footer
+          className="col-12"
+          id="footer"
+        >
+          <p>
+            Copyright © 2018 Store managers Design. All rights reserved.
+          </p>
+        </footer>
+      </Footer>
+    </App>
+  </Connect(App)>
+</Provider>
 `;

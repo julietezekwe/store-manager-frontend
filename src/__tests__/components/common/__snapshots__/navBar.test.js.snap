@@ -53,7 +53,9 @@ exports[`Menu Component should match snapshot 1`] = `
           className="fas fa-sign-in-alt"
         >
            
-          <span>
+          <span
+            onClick={[Function]}
+          >
              Logout
           </span>
         </i>

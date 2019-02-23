@@ -35,9 +35,10 @@ export const loginUser = (user, props) => async (dispatch) => {
 
     const userDetail = await jwtDecode(userDetails.data.token);
 
-    const payload = { ...userDetail, token: userDetails.data.token };
+    const payload = { ...userDetail };
     await dispatch(loginUserSuccess(payload));
     await localStorage.setItem('user', JSON.stringify(payload));
+    await localStorage.setItem('token', userDetails.data.token);
     await localStorage.setItem('isLoggedIn', true);
     if (payload.role === 'attendant') setCart(payload);
     if (userDetail.role === 'admin') {
