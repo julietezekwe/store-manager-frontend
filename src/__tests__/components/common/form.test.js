@@ -24,10 +24,23 @@ const props = {
         created_at: '2019-02-14T14:09:50.480Z',
       },
     ],
+    users: [
+      {
+        id: 2,
+        name: 'admin',
+        username: 'admin',
+        email: 'admin@gmial.com',
+        role: 1000,
+        joine: '2019-02-14T14:09:50.480Z',
+      },
+    ],
   },
   addProduct: () => Promise.resolve(),
   editProduct: () => Promise.resolve(),
   deleteProduct: () => Promise.resolve(),
+  addUser: () => Promise.resolve(),
+  editUser: () => Promise.resolve(),
+  deleteUser: () => Promise.resolve(),
 };
 
 describe('<LoginForm />', () => {
@@ -82,6 +95,24 @@ describe('<LoginForm />', () => {
       .toEqual(true);
     expect(wrapper.instance().deleteProduct.calledWith(e));
   });
+  it('renders delete user form when action is deleteUser', () => {
+    const newProps = {
+      ...props,
+      action: 'deleteUser',
+    };
+    wrapper = shallow(<Form {...newProps} />);
+    expect(wrapper.find('.deleteUser').length).toEqual(1);
+  });
+  it('calls deleteUser()', () => {
+    const e = {
+      preventDefault: jest.fn(),
+    };
+    sinon.spy(wrapper.instance(), 'deleteUser');
+    wrapper.instance().deleteUser(e);
+    expect(wrapper.instance().deleteUser.calledOnce)
+      .toEqual(true);
+    expect(wrapper.instance().deleteUser.calledWith(e));
+  });
   it('renders edit product form when action is editProduct', () => {
     const newProps = {
       ...props,
@@ -101,5 +132,25 @@ describe('<LoginForm />', () => {
     expect(wrapper.instance().updateProduct.calledOnce)
       .toEqual(true);
     expect(wrapper.instance().updateProduct.calledWith(e));
+  });
+  it('renders edit user form when action is editUser', () => {
+    const newProps = {
+      ...props,
+      action: 'eidtUser',
+    };
+
+    wrapper = shallow(<Form {...newProps} />);
+
+    expect(wrapper.find('.editUser').length).toEqual(1);
+  });
+  it('calls updateUser()', () => {
+    const e = {
+      preventDefault: jest.fn(),
+    };
+    sinon.spy(wrapper.instance(), 'updateUser');
+    wrapper.instance().updateUser(e);
+    expect(wrapper.instance().updateUser.calledOnce)
+      .toEqual(true);
+    expect(wrapper.instance().updateUser.calledWith(e));
   });
 });

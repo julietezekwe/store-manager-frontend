@@ -80,8 +80,11 @@ exports[`ProductList Component should match snapshot 1`] = `
         <Form
           action="addProduct"
           addProduct={[Function]}
+          addUser={[Function]}
           deleteProduct={[Function]}
+          deleteUser={[Function]}
           editProduct={[Function]}
+          editUser={[Function]}
           products={
             Array [
               Object {
@@ -326,8 +329,11 @@ exports[`ProductList Component should match snapshot 1`] = `
               <Form
                 action="editProduct"
                 addProduct={[Function]}
+                addUser={[Function]}
                 deleteProduct={[Function]}
+                deleteUser={[Function]}
                 editProduct={[Function]}
+                editUser={[Function]}
                 proId={1}
                 products={
                   Array [
@@ -494,8 +500,11 @@ exports[`ProductList Component should match snapshot 1`] = `
               <Form
                 action="deleteProduct"
                 addProduct={[Function]}
+                addUser={[Function]}
                 deleteProduct={[Function]}
+                deleteUser={[Function]}
                 editProduct={[Function]}
+                editUser={[Function]}
                 proId={1}
                 products={
                   Array [
@@ -639,8 +648,11 @@ exports[`ProductList Component should match snapshot 1`] = `
               <Form
                 action="editProduct"
                 addProduct={[Function]}
+                addUser={[Function]}
                 deleteProduct={[Function]}
+                deleteUser={[Function]}
                 editProduct={[Function]}
+                editUser={[Function]}
                 proId={2}
                 products={
                   Array [
@@ -807,8 +819,11 @@ exports[`ProductList Component should match snapshot 1`] = `
               <Form
                 action="deleteProduct"
                 addProduct={[Function]}
+                addUser={[Function]}
                 deleteProduct={[Function]}
+                deleteUser={[Function]}
                 editProduct={[Function]}
+                editUser={[Function]}
                 proId={2}
                 products={
                   Array [
@@ -957,8 +972,11 @@ exports[`ProductList Component should match snapshot 1`] = `
               <Form
                 action="editProduct"
                 addProduct={[Function]}
+                addUser={[Function]}
                 deleteProduct={[Function]}
+                deleteUser={[Function]}
                 editProduct={[Function]}
+                editUser={[Function]}
                 proId={3}
                 products={
                   Array [
@@ -1125,8 +1143,11 @@ exports[`ProductList Component should match snapshot 1`] = `
               <Form
                 action="deleteProduct"
                 addProduct={[Function]}
+                addUser={[Function]}
                 deleteProduct={[Function]}
+                deleteUser={[Function]}
                 editProduct={[Function]}
+                editUser={[Function]}
                 proId={3}
                 products={
                   Array [
