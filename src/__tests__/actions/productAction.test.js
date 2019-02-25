@@ -45,8 +45,8 @@ describe('Products actions', () => {
       done();
     });
   });
-  it(`dispatches SET_PRODUCTS_ERROR and
-  SET_PRODUCTS when fetching products`, (done) => {
+  it(`dispatches SET_PRODUCTS_REQUEST and
+  SET_PRODUCTS_ERROR when fetching products`, (done) => {
     moxios.wait(() => {
       const request = moxios.requests.mostRecent();
       request.respondWith({
@@ -91,8 +91,8 @@ describe('Products actions', () => {
       done();
     });
   });
-  it(`dispatches SET_PRODUCTS_ERROR and
-  SET_PRODUCTS when fetching A product`, (done) => {
+  it(`dispatches SET_PRODUCTS_REQUEST and
+  SET_PRODUCTS_ERROR when fetching A product`, (done) => {
     moxios.wait(() => {
       const request = moxios.requests.mostRecent();
       request.respondWith({
@@ -115,7 +115,7 @@ describe('Products actions', () => {
     });
   });
   it(`dispatches ADD_PRODUCTS_REQUEST and
-  ADD_PRODUCTS_ERROR when adding products`, (done) => {
+  ADD_PRODUCTS_ERROR when adding products fails`, (done) => {
     moxios.wait(() => {
       const request = moxios.requests.mostRecent();
       request.respondWith({
@@ -183,7 +183,7 @@ describe('Products actions', () => {
       done();
     });
   });
-  it('creates DELETE_PRODUCT_SUCCESS', async () => {
+  it('creates DELETE_PRODUCT', async () => {
     moxios.stubRequest(`${basePath}/products/2`, {
       status: 200,
     });
@@ -193,7 +193,7 @@ describe('Products actions', () => {
     expect(store.getActions()[0].type).toEqual(expectedActions.type);
     expect(store.getActions()[0].payload).toEqual('deleted');
   });
-  it('creates EDIT_PRODUCT_SUCCESS', async () => {
+  it('creates EDIT_PRODUCT', async () => {
     moxios.stubRequest(`${basePath}/products/1`, {
       status: 201,
     });

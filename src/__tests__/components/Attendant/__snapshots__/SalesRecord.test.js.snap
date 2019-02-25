@@ -13,7 +13,7 @@ exports[`SalesRecord Component should match snapshot 1`] = `
         },
         "saleDetail": Array [
           Object {
-            "created_at": 2019-02-23T18:18:22.556Z,
+            "created_at": 2019-02-25T16:37:33.416Z,
             "description": "fine",
             "price": 1200,
             "productid": 1,
@@ -112,7 +112,7 @@ exports[`SalesRecord Component should match snapshot 1`] = `
               chidimma
             </td>
             <td>
-              2019-02-23
+              2019-02-25
             </td>
           </tr>
         </tbody>

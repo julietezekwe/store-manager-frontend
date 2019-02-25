@@ -21,7 +21,7 @@ exports[`Checkout Component should match snapshot 1`] = `
         "cartProductDetails": Array [
           Array [
             Object {
-              "created_at": 2019-02-23T18:18:15.992Z,
+              "created_at": 2019-02-25T16:37:32.967Z,
               "description": "fine",
               "id": 1,
               "price": 1200,

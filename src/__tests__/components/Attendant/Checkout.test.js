@@ -39,8 +39,18 @@ describe('Checkout Component', () => {
   it('calls handleRemoveFromCart()', () => {
     localStorage.setItem(3, '{"cartNo":[2, 6]}');
     sinon.spy(wrapper.instance(), 'handleRemoveFromCart');
-    wrapper.instance().handleRemoveFromCart(1);
+    wrapper.instance().handleRemoveFromCart(2);
     expect(wrapper.instance().handleRemoveFromCart.calledOnce)
+      .toEqual(true);
+  });
+  it('calls onQuantityChange()', () => {
+    const quantity = 10;
+    const id = 2;
+    const price = 1000;
+    // localStorage.setItem(3, '{"cartNo":[2, 6]}');
+    sinon.spy(wrapper.instance(), 'onQuantityChange');
+    wrapper.instance().onQuantityChange(quantity, id, price);
+    expect(wrapper.instance().onQuantityChange.calledOnce)
       .toEqual(true);
   });
 });
