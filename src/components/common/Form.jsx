@@ -33,8 +33,7 @@ export class Form extends Component {
   show = (index, id) => {
     localStorage.setItem('id', id);
 
-    const dialog = document.querySelectorAll('dialog');
-    dialog[index].showModal();
+    document.querySelectorAll('dialog')[index].showModal();
   };
 
   close = (index) => {

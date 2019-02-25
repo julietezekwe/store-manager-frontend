@@ -25,7 +25,6 @@ export class App extends Component {
                 </BrowserRouter>
                 <Footer />
               </React.Fragment>
-
       );
     }
 }

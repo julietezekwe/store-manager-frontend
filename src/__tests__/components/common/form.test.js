@@ -30,6 +30,7 @@ const props = {
         name: 'admin',
         username: 'admin',
         email: 'admin@gmial.com',
+        password: 'admin',
         role: 1000,
         joine: '2019-02-14T14:09:50.480Z',
       },
@@ -66,6 +67,22 @@ describe('<LoginForm />', () => {
     expect(wrapper.instance().submitProduct.calledOnce)
       .toEqual(true);
     expect(wrapper.instance().submitProduct.calledWith(e));
+  });
+  it('calls close()', () => {
+    const index = 0;
+    const id = 2;
+    sinon.spy(wrapper.instance(), 'close');
+    wrapper.instance().close(index, id);
+    expect(wrapper.instance().close.calledOnce)
+      .toEqual(true);
+  });
+  it('calls show()', () => {
+    const index = 0;
+    const id = 2;
+    sinon.spy(wrapper.instance(), 'show');
+    wrapper.instance().show(index, id);
+    expect(wrapper.instance().show.calledOnce)
+      .toEqual(true);
   });
   it('calls onFormFieldChange()', () => {
     const event = {

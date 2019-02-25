@@ -31,6 +31,8 @@ beforeEach(() => {
 });
 describe('App Component', () => {
   it('should match snapshot', () => {
+    localStorage.setItem('user', '');
+    localStorage.setItem('token', '');
     const Apps = wrapper.find('App').instance();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.find('NavBar')

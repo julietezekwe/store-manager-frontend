@@ -16,6 +16,7 @@ import {
   GET_CART_PRODUCT,
   CHECKOUT_REQUEST,
   CHECKOUT_SUCCESS,
+  CHECKOUT_ERROR,
 
 } from './types';
 import Notify from '../helpers/Notify';
@@ -70,6 +71,11 @@ export const checkoutRequest = () => ({
 export const checkoutSuccess = payload => ({
   type: CHECKOUT_SUCCESS,
   payload,
+});
+
+export const checkoutError = error => ({
+  type: CHECKOUT_ERROR,
+  error,
 });
 
 export const getAllSales = () => async (dispatch) => {
@@ -145,6 +151,7 @@ export const getAllCartProducts = cartProducts => async (dispatch) => {
   dispatch(cartProductRequest());
   setHeader();
   try {
+   
     let totalPrice = 0;
     let cartProductDetails = [];
     let payload;
@@ -180,8 +187,6 @@ export const handleCheckout = id => async (dispatch) => {
   setHeader();
   try {
     const { rows } = document.getElementById('checkout');
-
-
     const sales = [];
     for (let i = 1; i < rows.length - 2; i += 1) {
       const sale = {
@@ -209,6 +214,6 @@ export const handleCheckout = id => async (dispatch) => {
       errorMessage = resolveError(error);
     }
     Notify.notifyError(`Error adding product. ${errorMessage}`);
-    dispatch(cartProductError(errorMessage));
+    dispatch(checkoutError(errorMessage));
   }
 };

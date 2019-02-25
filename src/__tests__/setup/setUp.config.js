@@ -33,6 +33,86 @@ class LocalStorageMock {
     delete this.store[key];
   }
 }
-
+global.document.querySelectorAll = () => {
+  const dialog = [
+    {
+      showModal: () => {},
+      close: () => {},
+    },
+    {
+      showModal: () => {},
+      close: () => {},
+    },
+    {
+      showModal: () => {},
+      close: () => {},
+    },
+    {
+      showModal: () => {},
+      close: () => {},
+    },
+  ];
+  return dialog;
+};
+global.document.getElementById = () => ({
+  innerHTML: 10,
+  rows: [
+    {
+      cells: [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+      ],
+    },
+    {
+      cells: [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+      ],
+    },
+    {
+      cells: [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+      ],
+    },
+    {
+      cells: [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+      ],
+    },
+    {
+      cells: [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+      ],
+    },
+  ],
+});
+global.totalPrice = 0;
+global.cartProductDetails = [];
+global.payload;
+global.count = 1;
+global.sales = [];
 jest.setTimeout(60000);
 global.localStorage = LocalStorageMock;
